@@ -60,18 +60,26 @@ html, body {
 //-------------------------Variables---------------------------------------------
 
 // ------------------------mixins------------------------------------------------
-.button(){
+.navButtons(){
 	text-decoration: none;
 	padding: 10px 20px;
-	// border: 1px solid black;
+	border: 1px solid black;
 	border-radius: 5px;
-	background: black;
-	color: white;
+	background-color: lightgray;
+	color: black;
+}
+
+.buttons(){
+	text-decoration: none;
+	padding: 10px 20px;
+	border: 1px solid black;
+	border-radius: 5px;
 }
 
 .flexBetween(){
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 
 .flex(){
@@ -79,45 +87,68 @@ html, body {
 	justify-content: space-evenly;
 }
 //--------------------------main css----------------------------------------------
+body {
+	background: url(/imgs/chicagobg.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
 .mainDiv {
 	width: 80vw;
 	margin: 0 auto;
 
 	nav {
 		.flexBetween();
-		align-items: center;
 		width: 50%;
-		padding: 30px 0;
+		height: 15vh;
 		margin: 0 0 0 auto;
 
 		a {
-			.button()
+			.navButtons()
 		}// close of a
 	}// close of nav
 
-	header {
+	#about {//-----------------------start of about section
 		padding: 3% 2%;
 		background: lightgray;
 		.flex();
 
 		img{
-			width: 30%;
+			width: auto;
+			max-height: 450px;
 		}//close of img
+
 		div {
 			font-family: 'Courier New', Courier, monospace;
+			width: 70%;
+			margin: 0 20px;
 
 			h1 {
-				font-size: 2rem;	
-				margin-bottom: 20px;
+				font-size: 3rem;	
+				border-bottom: 1px solid black;
 			}//close of h1
 
-			p {
+			h2 {
+				font-size: 1.5rem;
+				margin-bottom: 30px;
+			}//close of h2
 
+			p {
+				margin: 40px 0; 
 			}//close of p
 
 			.button {
-
+				.buttons();
+				background: black;
+				color: white;
 			}//close of .button
+
 		}//close of div
 	}//close of header
+
+	.spaceBig {
+		height: 85vh;
+	}
+
 }//close of mainDiv
