@@ -255,6 +255,9 @@ body {
   flex-direction: column;
   justify-content: center;
 }
+.mainDiv #contact form h2 {
+  font-size: 1.7rem;
+}
 .mainDiv #contact form div {
   margin: 4% 0 0 0;
 }
