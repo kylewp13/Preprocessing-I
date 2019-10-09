@@ -58,14 +58,16 @@ html, body {
 		font-size: 62.5;
 }
 //-------------------------Variables---------------------------------------------
-
+@backgroundcolor: white;
+@backgroundimg: url(/imgs/chicagobg.jpg);
+@buttonradius: 8px;
 // ------------------------mixins------------------------------------------------
 .navButtons(){
 	text-decoration: none;
 	padding: 10px 20px;
 	border: 1px solid black;
-	border-radius: 5px;
-	background-color: lightgray;
+	border-radius: @buttonradius;
+	background-color: @backgroundcolor;
 	color: black;
 }
 
@@ -73,7 +75,7 @@ html, body {
 	text-decoration: none;
 	padding: 10px 20px;
 	border: 1px solid black;
-	border-radius: 5px;
+	border-radius: @buttonradius;
 }
 
 .flexBetween(){
@@ -88,7 +90,8 @@ html, body {
 }
 //--------------------------main css----------------------------------------------
 body {
-	background: url(/imgs/chicagobg.jpg);
+	background: @backgroundimg;
+	background-color: black;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -98,20 +101,57 @@ body {
 	width: 80vw;
 	margin: 0 auto;
 
-	nav {
+	nav {//------------------------start of nav
 		.flexBetween();
 		width: 50%;
 		height: 15vh;
 		margin: 0 0 0 auto;
 
 		a {
+			font-family: 'Almarai', sans-serif;
+			font-size: 1.2rem;
 			.navButtons()
 		}// close of a
 	}// close of nav
 
+	header {//----------------------start of header
+		.flexBetween();
+		justify-content: center;
+
+		div {
+			font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+			color: white;
+
+			h1 {
+				font-family: 'Monoton', cursive;
+				font-size: 7rem;
+				border-bottom: 2px solid white;
+				text-shadow: 2px 2px #ff0000;
+			}//close of h1
+
+			h2 {
+				font-size: 2rem;
+				letter-spacing: 5px;
+			}//close of h2
+		}//close of div 
+
+		.fas {
+			background: @backgroundcolor;
+			color: black;
+			width: 100px;
+			height: 100px;
+			font-size: 5rem;
+			border-top-left-radius: 30px;
+			border-top-right-radius: 30px;
+			position: absolute; 
+			bottom: 0px;
+			text-align: center;
+		}//close of .fas
+	}//close of header
+
 	#about {//-----------------------start of about section
 		padding: 3% 2%;
-		background: lightgray;
+		background: @backgroundcolor;
 		.flex();
 
 		img{
@@ -143,12 +183,22 @@ body {
 				background: black;
 				color: white;
 			}//close of .button
-
 		}//close of div
-	}//close of header
+	}//close of #about
+
+	#resume {//---------------------------------start of resume
+		padding: 3% 2%;
+		background: @backgroundcolor;
+		.flex();
+
+	}//close of #resume
 
 	.spaceBig {
 		height: 85vh;
-	}
+	}//close of .spaceBig
+
+	.spaceSmall {
+		height: 20vh;
+	}//close of .spaceSmall
 
 }//close of mainDiv

@@ -137,6 +137,7 @@ body {
 }
 body {
   background: url(/imgs/chicagobg.jpg);
+  background-color: black;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -154,16 +155,50 @@ body {
   margin: 0 0 0 auto;
 }
 .mainDiv nav a {
+  font-family: 'Almarai', sans-serif;
+  font-size: 1.2rem;
   text-decoration: none;
   padding: 10px 20px;
   border: 1px solid black;
-  border-radius: 5px;
-  background-color: lightgray;
+  border-radius: 8px;
+  background-color: white;
   color: black;
+}
+.mainDiv header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+}
+.mainDiv header div {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+}
+.mainDiv header div h1 {
+  font-family: 'Monoton', cursive;
+  font-size: 7rem;
+  border-bottom: 2px solid white;
+  text-shadow: 2px 2px #ff0000;
+}
+.mainDiv header div h2 {
+  font-size: 2rem;
+  letter-spacing: 5px;
+}
+.mainDiv header .fas {
+  background: white;
+  color: black;
+  width: 100px;
+  height: 100px;
+  font-size: 5rem;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
 }
 .mainDiv #about {
   padding: 3% 2%;
-  background: lightgray;
+  background: white;
   display: flex;
   justify-content: space-evenly;
 }
@@ -191,10 +226,19 @@ body {
   text-decoration: none;
   padding: 10px 20px;
   border: 1px solid black;
-  border-radius: 5px;
+  border-radius: 8px;
   background: black;
   color: white;
 }
+.mainDiv #resume {
+  padding: 3% 2%;
+  background: white;
+  display: flex;
+  justify-content: space-evenly;
+}
 .mainDiv .spaceBig {
   height: 85vh;
+}
+.mainDiv .spaceSmall {
+  height: 20vh;
 }
