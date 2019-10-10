@@ -102,12 +102,19 @@ html, body {
 .mainDiv {
 	width: 80vw;
 	margin: 0 auto;
-	
+
+	@media (max-width: 500px){
+		width: 100%;
+	}//close of media	
 	nav {//------------------------start of nav
 		.flexBetween();
 		width: 50%;
 		height: 15vh;
 		margin: 0 0 0 auto;
+
+		@media (max-width: 500px){
+			width: 100%;
+		}//close of media
 		
 		a {
 			font-family: 'Almarai', sans-serif;
@@ -129,6 +136,10 @@ html, body {
 				font-size: 7rem;
 				border-bottom: 2px solid white;
 				text-shadow: 2px 2px #ff0000;
+
+				@media (max-width: 500px){
+					font-size: 5rem;
+				}//close of media
 			}//close of h1
 			
 			h2 {
@@ -148,6 +159,10 @@ html, body {
 			position: absolute; 
 			bottom: 0px;
 			text-align: center;
+
+			@media (max-width: 500px){
+				display: none;
+			}//close of media
 		}//close of .fas
 	}//close of header
 	
@@ -155,10 +170,18 @@ html, body {
 		padding: 3% 2%;
 		background: @backgroundcolor;
 		.flex();
-		
+		 
+		@media (max-width: 500px) {
+			flex-direction: column;
+			align-items: center;
+		}
 		img{
 			width: auto;
 			max-height: 450px;
+
+			@media (max-width: 500px){
+				width: 80%;
+			}//close of media
 		}//close of img
 		
 		div {
@@ -232,6 +255,10 @@ html, body {
 		nav {
 			width: 50%;
 			margin: 0 auto;
+
+			@media (max-width: 500px){
+				width: 100%;
+			}
 
 			a {
 				display: flex;
