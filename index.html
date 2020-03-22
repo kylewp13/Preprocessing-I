@@ -3,17 +3,110 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
+  <meta name="viewport" content= "width=device-width, initial-scale=1.0">
   <title>My Resume</title>
-
+  <link href="https://fonts.googleapis.com/css?family=Almarai|Monoton&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/index.css">
-
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
+  <script src="https://kit.fontawesome.com/e803fb094f.js" crossorigin="anonymous"></script>
+  
 </head>
-
-<body>
-  <h1>My Resume</h1>
+<body>  
+  <div class="bgImg">
+    <div class="mainDiv">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#about">About</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <header class="spaceBig">
+        <div>
+          <h1>Kyle Porter</h1>
+          <h2>Full Stack Web Developer</h2>
+        </div>
+        <div><a href="#about"><i class="fas fa-chevron-down"></i></a></div>
+      </header>
+      <section id="about">
+        <img src="imgs/kyle-porter.jpg" alt="photo of Kyle Porter">
+        <div>
+          <h1>Kyle Porter</h1>
+          <h2>Full Stack Web Development</h2>
+          <p>Hi my name is Kyle and I'm originally from a small town in south Georgia</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam debitis neque nam, totam dolor excepturi quasi assumenda eaque ratione ipsum doloremque iure. Exercitationem, repellat quod. Corrupti mollitia architecto officia suscipit!</p>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda necessitatibus odit veritatis explicabo, in ipsum ipsam eius beatae magni quidem tempore quo optio mollitia omnis nisi consequuntur consequatur alias cupiditate.</p>
+          <div><a class="button" href="#contact">Lets Team Up</a></div>
+        </div>
+      </section>
+      <div class="spaceSmall"></div>
+      <section id="resume">
+        <div>
+          <h2>My work history</h2>
+          <ul>
+            <li>
+              <img src="" alt="Lambda">
+              <h3>Lambda</h3>
+            </li>
+            <li>
+              <img src="" alt="eXp Realty">
+              <h3>eXp Realty</h3>
+            </li>
+            <li>
+              <img src="" alt="Lake Park Police Department">
+              <h3>Lake Park Police Department</h3>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2>Skills</h2>
+          <ul>
+            <li>Communication</li>
+            <li>Ability to Work Under Pressure</li>
+            <li>Decision Making</li>
+            <li>Time Management</li>
+            <li>Self-motivation</li>
+            <li>Conflict Resolution</li>
+            <li>Leadership</li>
+            <li>Adaptability</li>
+          </ul>
+        </div>
+      </section>
+      <div class="spaceSmall"></div>
+      <section id="contact">
+        <img src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+        <form action="#">
+          <h2>Get in Contact</h2>
+          <div>
+            <label for="name">Name:</label>
+            <input id="name" type="text">
+          </div>
+          <div>
+            <label for="number">Number:</label>
+            <input id="number" type="tel">
+          </div>
+          <div>
+            <label for="email">Email:</label>
+            <input id="email" type="email">
+          </div>
+          <div>
+            <label for="work">Lets work together.</label>
+            <input id="work" type="text" style="height: 80px;">
+          </div>
+          <div>
+            <input type="submit">
+          </div>
+        </form>
+      </section>
+      <div class="spaceSmall"></div>
+      <footer>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="#about">About</a>
+          <a href="#resume">Resume</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <p>copyright 2019 | Kyle Porter</p>
+      </footer>
+    </div>
+  </div>
 </body>
 </html>

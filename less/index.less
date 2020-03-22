@@ -1,7 +1,7 @@
 // Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+v2.0 | 20110126
+License: none (public domain)
 */
 
 html, body, div, span, applet, object, iframe,
@@ -50,10 +50,234 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-size: 62.5;
+}
+//-------------------------Variables---------------------------------------------
+@backgroundcolor: white;
+@backgroundimg: url(/imgs/chicagobg.jpg);
+@buttonradius: 8px;
+// ------------------------mixins------------------------------------------------
+.navButtons(){
+	text-decoration: none;
+	padding: 10px 20px;
+	border: 1px solid black;
+	border-radius: @buttonradius;
+	background-color: @backgroundcolor;
+	color: black;
 }
 
+.buttons(){
+	text-decoration: none;
+	padding: 10px 20px;
+	border: 1px solid black;
+	border-radius: @buttonradius;
+}
+
+.flexBetween(){
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.flex(){
+	display: flex;
+	justify-content: space-evenly;
+}
+//--------------------------main css----------------------------------------------
+.bgImg {
+	background: @backgroundimg;
+	background-size: 100%;
+	// height: 300px;
+	background-color: black;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.mainDiv {
+	width: 80vw;
+	margin: 0 auto;
+
+	@media (max-width: 500px){
+		width: 100%;
+	}//close of media	
+	nav {//------------------------start of nav
+		.flexBetween();
+		width: 50%;
+		height: 15vh;
+		margin: 0 0 0 auto;
+
+		@media (max-width: 500px){
+			width: 100%;
+		}//close of media
+		
+		a {
+			font-family: 'Almarai', sans-serif;
+			font-size: 1.2rem;
+			.navButtons()
+		}// close of a
+	}// close of nav
+	
+	header {//----------------------start of header
+		.flexBetween();
+		justify-content: center;
+		
+		div {
+			font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+			color: white;
+			
+			h1 {
+				font-family: 'Monoton', cursive;
+				font-size: 7rem;
+				border-bottom: 2px solid white;
+				text-shadow: 2px 2px #ff0000;
+
+				@media (max-width: 500px){
+					font-size: 5rem;
+				}//close of media
+			}//close of h1
+			
+			h2 {
+				font-size: 2rem;
+				letter-spacing: 5px;
+			}//close of h2
+		}//close of div 
+		
+		.fas {
+			background: @backgroundcolor;
+			color: black;
+			width: 100px;
+			height: 100px;
+			font-size: 5rem;
+			border-top-left-radius: 30px;
+			border-top-right-radius: 30px;
+			position: absolute; 
+			bottom: 0px;
+			text-align: center;
+
+			@media (max-width: 500px){
+				display: none;
+			}//close of media
+		}//close of .fas
+	}//close of header
+	
+	#about {//-----------------------start of about section
+		padding: 3% 2%;
+		background: @backgroundcolor;
+		.flex();
+		 
+		@media (max-width: 500px) {
+			flex-direction: column;
+			align-items: center;
+		}
+		img{
+			width: auto;
+			max-height: 450px;
+
+			@media (max-width: 500px){
+				width: 80%;
+			}//close of media
+		}//close of img
+		
+		div {
+			font-family: 'Courier New', Courier, monospace;
+			width: 70%;
+			margin: 0 20px;
+			
+			h1 {
+				font-size: 3rem;	
+				border-bottom: 1px solid black;
+			}//close of h1
+			
+			h2 {
+				font-size: 1.5rem;
+				margin-bottom: 30px;
+			}//close of h2
+			
+			p {
+				margin: 40px 0; 
+			}//close of p
+			
+			.button {
+				.buttons();
+				background: black;
+				color: white;
+			}//close of .button
+		}//close of div
+	}//close of #about
+	
+	#resume {//---------------------------------start of resume
+		padding: 3% 2%;
+		background: @backgroundcolor;
+		.flex();
+		
+		h2 {
+			font-size: 1.3rem;
+		}//close of h2
+		
+	}//close of #resume
+
+	#contact {
+		padding: 3% 2%;
+		background: @backgroundcolor;
+		.flex();
+
+		img {
+			width: 50%;
+		}//close of img
+
+		form {
+			width: 46%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			h2 {
+				font-size: 1.7rem;
+			}//close of h2
+			
+			div	{
+				margin: 4% 0 0 0;
+			}// close of div
+		}//close of form
+	}//close of contact
+
+	footer {
+		padding: 3% 2% 0 2%;
+		background: @backgroundcolor;
+		text-align: center;
+
+		nav {
+			width: 50%;
+			margin: 0 auto;
+
+			@media (max-width: 500px){
+				width: 100%;
+			}
+
+			a {
+				display: flex;
+				justify-content: space-between;
+				background: black;
+				color: white;
+			}//close of a
+		}//close of nav
+		p {
+			padding: 0 0 2% 0;
+		}
+	}//close of footer
+	
+	.spaceBig {
+		height: 85vh;
+	}//close of .spaceBig
+	
+	.spaceSmall {
+		height: 20vh;
+	}//close of .spaceSmall
+	
+}//close of mainDiv
